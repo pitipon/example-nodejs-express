@@ -24,7 +24,7 @@ jobs:
           name: "Build docker image and push to docker hub"
           command: |
               cp Dockerfile.production Dockerfile
-              docker build -t pitipon/example-nodejs-cirle:latest .
+              docker build -t pitipon/example-nodejs-circle:latest .
               docker build -t pitipon/example-nodejs-circle:${CIRCLE_SHA1} .
               docker push pitipon/example-nodejs-circle:latest
               docker push pitipon/example-nodejs-circle:${CIRCLE_SHA1}
